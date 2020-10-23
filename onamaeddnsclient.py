@@ -1,8 +1,8 @@
-#!/bin/python -u
+#!/usr/bin/python3 -u
 # -*- coding: utf-8 -*-
 
 #--------------------------------------------------------------------#
-# onamaeddnsclient.py  Ver. 1.0.0(2020/10/19)                        #
+# onamaeddnsclient.py  Ver. 1.0.1(2020/10/24)                        #
 #   お名前.com ダイナミックDNS クライアント(複数ドメイン対応版)      #
 #     Copyright (C) 2020 chidipy  http://chidipy.jpn.com/            #
 #--------------------------------------------------------------------#
