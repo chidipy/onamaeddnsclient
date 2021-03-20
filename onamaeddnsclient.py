@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 #--------------------------------------------------------------------#
-# onamaeddnsclient.py  Ver. 1.1.0(2021/03/20)                        #
+# onamaeddnsclient.py  Ver. 1.2.0(2021/03/20)                        #
 #   お名前.com ダイナミックDNS クライアント(複数ドメイン対応版)      #
 #     Copyright (C) 2020-2021 chidipy  http://chidipy.jpn.com/       #
 #--------------------------------------------------------------------#
@@ -50,6 +50,9 @@ MAIL_FROM=""
 MAIL_TO=""
 # 通知メール件名
 MAIL_SUBJECT="Onamae DDNS Client(Non-Formula)"
+
+# タイムアウト秒数
+TIMEOUT_SEC=120
 
 #--------------------------------------------------------------------#
 # 定数                                                               #
@@ -267,8 +270,8 @@ LOGOUT
 
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         try:
-            # タイムアウト5秒
-            sock.settimeout(5)
+            # タイムアウト設定
+            sock.settimeout(TIMEOUT_SEC)
             # SSLソケット作成
             sslsock=ssl.wrap_socket(sock)
             # 接続
